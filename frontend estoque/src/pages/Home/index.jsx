@@ -39,6 +39,7 @@ function Home() {
           fontSize="1.1rem"
         >
           Controle seu estoque com agilidade e segurança. Comece agora.
+          {/*sfsdfsdf*/}
         </Text>
         <Flex w="100%" justify="space-between" align="center">
           <Button
