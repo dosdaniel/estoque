@@ -93,8 +93,8 @@ function Register() {
   return (
     <Flex height="80vh" align="center">
       <Card mt="4">
-        <Flex direction="column" align="center" mt="-5" mb="-6">
-          <Image src='https://media.discordapp.net/attachments/1145714113419415573/1355159204134129725/icon_register.png?ex=680247db&is=6800f65b&hm=b42841e5c8dc7496741c477aa41503de2969faaa59e80afb0330f53348bafa74&=&format=webp&quality=lossless&width=960&height=960'
+        <Flex direction="column" align="center" mt="-5" mb="0">
+          <Image src='https://i.imgur.com/FHRThEs.png'
             height="200px"
           />
         </Flex>

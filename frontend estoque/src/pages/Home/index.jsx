@@ -15,8 +15,8 @@ function Home() {
   return (
     <Flex height="60vh" align="center">
       <Card mt="-4">
-        <Flex direction="column" align="center" mt="-12" mb="-10">
-          <Image src='https://media.discordapp.net/attachments/1145714113419415573/1354984651827056791/logo.png?ex=68024e0b&is=6800fc8b&hm=35a6f69a2d4b9e623e261cb65bc6fa1e7bc101c9597ab4180fc460468b1ea0a0&=&format=webp&quality=lossless&width=960&height=960'
+        <Flex direction="column" align="center" mt="-12" mb="-4">
+          <Image src='https://i.imgur.com/7htC2HW.png'
             height="250px"
           />
         </Flex>

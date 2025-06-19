@@ -36,7 +36,7 @@ function Login() {
     e.preventDefault()
     setErrorMessage('')
     if (!email || !password) {
-      setErrorMessage('Preencha os campos de email e senha.')
+      // setErrorMessage('Preencha os campos de email e senha.')
       return
     }
     try {
@@ -45,30 +45,31 @@ function Login() {
         login(response.data)
         navigate('/dashboard')
       } else {
-        setErrorMessage('Credenciais inválidas.')
+        // setErrorMessage('Credenciais inválidas.')
       }
     } catch (err) {
       console.error(err)
-      if (err.response) {
-        if (typeof err.response.data === 'string') {
-          setErrorMessage(err.response.data)
-        } else if (err.response.data && err.response.data.error) {
-          setErrorMessage(err.response.data.error)
-        } else {
-          setErrorMessage('Credenciais inválidas ou erro no servidor.')
-        }
-      } else {
-        setErrorMessage('Falha de rede ou erro inesperado.')
-      }
+      setErrorMessage(err.message)
+      // if (err.response) {
+      //   if (typeof err.response.data === 'string') {
+      //     setErrorMessage(err.response.data)
+      //   } else if (err.response.data && err.response.data.error) {
+      //     setErrorMessage(err.response.data.error)
+      //   } else {
+      //     setErrorMessage('Credenciais inválidas ou erro no servidor.')
+      //   }
+      // } else {
+      //   setErrorMessage('Falha de rede ou erro inesperado.')
+      // }
     }
   }
 
   return (
     <Flex>
       <Card mt="16">
-        <Flex direction="column" align="center" mt="-8" mb="-5">
+        <Flex direction="column" align="center" mt="-8" mb="0">
           <Image
-            src="https://media.discordapp.net/attachments/1145714113419415573/1355159204134129725/icon_register.png?ex=680247db&is=6800f65b&hm=b42841e5c8dc7496741c477aa41503de2969faaa59e80afb0330f53348bafa74&=&format=webp&quality=lossless&width=960&height=960"
+            src="https://i.imgur.com/FHRThEs.png"
             height="200px"
           />
         </Flex>
