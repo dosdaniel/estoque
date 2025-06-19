@@ -50,17 +50,17 @@ function Login() {
     } catch (err) {
       console.error(err)
       setErrorMessage(err.message)
-      // if (err.response) {
-      //   if (typeof err.response.data === 'string') {
-      //     setErrorMessage(err.response.data)
-      //   } else if (err.response.data && err.response.data.error) {
-      //     setErrorMessage(err.response.data.error)
-      //   } else {
-      //     setErrorMessage('Credenciais inválidas ou erro no servidor.')
-      //   }
-      // } else {
-      //   setErrorMessage('Falha de rede ou erro inesperado.')
-      // }
+      if (err.response) {
+        if (typeof err.response.data === 'string') {
+          setErrorMessage(err.response.data)
+        } else if (err.response.data && err.response.data.error) {
+          setErrorMessage(err.response.data.error)
+        } else {
+          setErrorMessage('Credenciais inválidas ou erro no servidor.')
+        }
+      } else {
+        setErrorMessage('Falha de rede ou erro inesperado.')
+      }
     }
   }
 
